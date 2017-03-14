@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		587A11425DCFB1976C8FA49B /* Pods_HNR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */; };
+		DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */; };
 		DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA191E78915B00BD3933 /* AppDelegate.swift */; };
-		DDDADA1C1E78915B00BD3933 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA1B1E78915B00BD3933 /* FirstViewController.swift */; };
-		DDDADA1E1E78915B00BD3933 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA1D1E78915B00BD3933 /* SecondViewController.swift */; };
 		DDDADA211E78915B00BD3933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDADA1F1E78915B00BD3933 /* Main.storyboard */; };
 		DDDADA231E78915B00BD3933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDADA221E78915B00BD3933 /* Assets.xcassets */; };
 		DDDADA261E78915B00BD3933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDADA241E78915B00BD3933 /* LaunchScreen.storyboard */; };
@@ -35,10 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E4A909A694A63AA75D1F683 /* Pods-HNR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.release.xcconfig"; sourceTree = "<group>"; };
+		BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.debug.xcconfig"; sourceTree = "<group>"; };
+		DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		DDDADA161E78915B00BD3933 /* HNR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDADA191E78915B00BD3933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDDADA1B1E78915B00BD3933 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DDDADA1D1E78915B00BD3933 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DDDADA201E78915B00BD3933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDDADA221E78915B00BD3933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDADA251E78915B00BD3933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		DDDADA371E78915B00BD3933 /* HNRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDADA3B1E78915B00BD3933 /* HNRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNRUITests.swift; sourceTree = "<group>"; };
 		DDDADA3D1E78915B00BD3933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587A11425DCFB1976C8FA49B /* Pods_HNR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,8 @@
 				DDDADA2F1E78915B00BD3933 /* HNRTests */,
 				DDDADA3A1E78915B00BD3933 /* HNRUITests */,
 				DDDADA171E78915B00BD3933 /* Products */,
+				E1F0432B83F54AF7F295BE2D /* Pods */,
+				DE7ABDC868B983FA751C0BEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDADA191E78915B00BD3933 /* AppDelegate.swift */,
-				DDDADA1B1E78915B00BD3933 /* FirstViewController.swift */,
-				DDDADA1D1E78915B00BD3933 /* SecondViewController.swift */,
+				DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */,
 				DDDADA1F1E78915B00BD3933 /* Main.storyboard */,
 				DDDADA221E78915B00BD3933 /* Assets.xcassets */,
 				DDDADA241E78915B00BD3933 /* LaunchScreen.storyboard */,
@@ -128,6 +132,23 @@
 			path = HNRUITests;
 			sourceTree = "<group>";
 		};
+		DE7ABDC868B983FA751C0BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1F0432B83F54AF7F295BE2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */,
+				9E4A909A694A63AA75D1F683 /* Pods-HNR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDDADA401E78915B00BD3933 /* Build configuration list for PBXNativeTarget "HNR" */;
 			buildPhases = (
+				945822AA687E67122730E024 /* [CP] Check Pods Manifest.lock */,
 				DDDADA121E78915B00BD3933 /* Sources */,
 				DDDADA131E78915B00BD3933 /* Frameworks */,
 				DDDADA141E78915B00BD3933 /* Resources */,
+				5FC4A7BD3D944351D7198EDC /* [CP] Embed Pods Frameworks */,
+				A77CCBB9F39373A1E36CFE4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +220,7 @@
 				TargetAttributes = {
 					DDDADA151E78915B00BD3933 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3JQ36LEA79;
 						ProvisioningStyle = Automatic;
 					};
 					DDDADA2B1E78915B00BD3933 = {
@@ -257,14 +282,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FC4A7BD3D944351D7198EDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNR/Pods-HNR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		945822AA687E67122730E024 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A77CCBB9F39373A1E36CFE4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNR/Pods-HNR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDDADA121E78915B00BD3933 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDDADA1E1E78915B00BD3933 /* SecondViewController.swift in Sources */,
+				DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */,
 				DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */,
-				DDDADA1C1E78915B00BD3933 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,11 +486,13 @@
 		};
 		DDDADA411E78915B00BD3933 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3JQ36LEA79;
 				INFOPLIST_FILE = HNR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.tiagoalves.HNR;
+				PRODUCT_BUNDLE_IDENTIFIER = co.iterar.HNR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,11 +500,13 @@
 		};
 		DDDADA421E78915B00BD3933 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E4A909A694A63AA75D1F683 /* Pods-HNR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3JQ36LEA79;
 				INFOPLIST_FILE = HNR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.tiagoalves.HNR;
+				PRODUCT_BUNDLE_IDENTIFIER = co.iterar.HNR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -509,6 +585,7 @@
 				DDDADA421E78915B00BD3933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDDADA431E78915B00BD3933 /* Build configuration list for PBXNativeTarget "HNRTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +594,7 @@
 				DDDADA451E78915B00BD3933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDDADA461E78915B00BD3933 /* Build configuration list for PBXNativeTarget "HNRUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +603,7 @@
 				DDDADA481E78915B00BD3933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_HNR {
+  umbrella header "Pods-HNR-umbrella.h"
+
+  export *
+  module * { export * }
+}
