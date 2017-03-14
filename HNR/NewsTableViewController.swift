@@ -19,27 +19,8 @@ class NewsTableViewController: UITableViewController {
         
         self.title = "News"
         
-        var counter = 0
-        
-        Alamofire.request("https://hacker-news.firebaseio.com/v0/topstories.json").responseJSON { response in
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-                
-                let arrayOfNews = response.result.value as! NSArray
-                for news in arrayOfNews.subarray(with: NSRange(location: 0, length: 10)) {
-                    Alamofire.request("https://hacker-news.firebaseio.com/v0/item/\(news).json").responseJSON { response in
-                        counter += 1
-                        if let JSON = response.result.value {
-                            print("JSON: \(JSON)")
-                            self.allNews.add(JSON)
-                        }
-                        if counter == 10 {
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            }
-        }
+        refreshNews();
+        self.refreshControl?.addTarget(self, action: #selector(refreshNews), for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,14 +80,31 @@ class NewsTableViewController: UITableViewController {
             
         }
     }
-
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func refreshNews() {
+        var counter = 0
+        let allNewNews : NSMutableArray = []
+        
+        Alamofire.request("https://hacker-news.firebaseio.com/v0/topstories.json").responseJSON { response in
+            if response.result.value != nil {
+                
+                let arrayOfNews = response.result.value as! NSArray
+                for news in arrayOfNews.subarray(with: NSRange(location: 0, length: 10)) {
+                    Alamofire.request("https://hacker-news.firebaseio.com/v0/item/\(news).json").responseJSON { response in
+                        counter += 1
+                        if let JSON = response.result.value {
+                            print("JSON: \(JSON)")
+                            allNewNews.add(JSON)
+                        }
+                        if counter == 10 {
+                            self.allNews = allNewNews
+                            self.tableView.reloadData()
+                            self.refreshControl?.endRefreshing()
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
