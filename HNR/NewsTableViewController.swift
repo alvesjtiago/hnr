@@ -19,8 +19,12 @@ class NewsTableViewController: UITableViewController {
         
         self.title = "News"
         
-        refreshNews();
         self.refreshControl?.addTarget(self, action: #selector(refreshNews), for: UIControlEvents.valueChanged)
+        
+        // Start refresh when view is loaded
+        self.tableView.setContentOffset(CGPoint(x: 0, y: self.tableView.contentOffset.y - 30), animated: false)
+        self.tableView.refreshControl?.beginRefreshing()
+        refreshNews()
     }
 
     override func didReceiveMemoryWarning() {
