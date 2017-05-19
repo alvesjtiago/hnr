@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		9E4A909A694A63AA75D1F683 /* Pods-HNR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.release.xcconfig"; sourceTree = "<group>"; };
 		BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.debug.xcconfig"; sourceTree = "<group>"; };
-		DD12F3541ECF4B7500627A37 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		DD12F3541ECF4B7500627A37 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = Views/NewsCell.swift; sourceTree = "<group>"; };
 		DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		DDDADA161E78915B00BD3933 /* HNR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDADA191E78915B00BD3933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD12F3561ECF5E1800627A37 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DD12F3571ECF5E4600627A37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD12F3541ECF4B7500627A37 /* NewsCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		DDDADA0D1E78915B00BD3933 = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				DDDADA191E78915B00BD3933 /* AppDelegate.swift */,
-				DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */,
-				DD12F3541ECF4B7500627A37 /* NewsCell.swift */,
-				DDDADA1F1E78915B00BD3933 /* Main.storyboard */,
+				DD12F3561ECF5E1800627A37 /* Controllers */,
+				DD12F3571ECF5E4600627A37 /* Views */,
 				DDDADA221E78915B00BD3933 /* Assets.xcassets */,
 				DDDADA241E78915B00BD3933 /* LaunchScreen.storyboard */,
+				DDDADA1F1E78915B00BD3933 /* Main.storyboard */,
 				DDDADA271E78915B00BD3933 /* Info.plist */,
 			);
 			path = HNR;

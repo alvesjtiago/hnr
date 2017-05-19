@@ -49,6 +49,7 @@ class NewsTableViewController: UITableViewController {
         let news = self.allNews[indexPath.row] as! NSDictionary
         
         cell.titleLabel?.text = news.value(forKey: "title") as? String
+        cell.titleLabel?.sizeToFit()
         
         cell.countLabel?.layer.masksToBounds = true
         cell.countLabel?.layer.cornerRadius = 11
@@ -66,6 +67,14 @@ class NewsTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let news = self.allNews[indexPath.row] as! NSDictionary
+        let title = news.value(forKey: "title") as? String
+        let constraintRect = CGSize(width: tableView.bounds.size.width - 32, height: CGFloat(MAXFLOAT))
+        let boundingBox = title?.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20) as Any], context: nil)
+        return (boundingBox!.height + 57.0)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
