@@ -44,19 +44,16 @@ class NewsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsCell
 
         let news = self.allNews[indexPath.row] as! NSDictionary
         
-        let titleLabel = cell.contentView.viewWithTag(100) as! UILabel
-        titleLabel.text = news.value(forKey: "title") as? String
+        cell.titleLabel?.text = news.value(forKey: "title") as? String
         
-        let scoreLabel = cell.contentView.viewWithTag(101) as! UILabel
-        scoreLabel.layer.masksToBounds = true
-        scoreLabel.layer.cornerRadius = 11
-        scoreLabel.text = String(describing: news.value(forKey: "score") as! Int)
+        cell.countLabel?.layer.masksToBounds = true
+        cell.countLabel?.layer.cornerRadius = 11
+        cell.countLabel?.text = String(describing: news.value(forKey: "score") as! Int)
         
-        let byLabel = cell.contentView.viewWithTag(102) as! UILabel
         if news.value(forKey: "by") != nil {
             let author = news.value(forKey: "by")
             let attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 15)]
@@ -65,7 +62,7 @@ class NewsTableViewController: UITableViewController {
             let attributedString = NSMutableAttributedString(string:"by ")
             attributedString.append(boldString)
             
-            byLabel.attributedText = attributedString
+            cell.authorLabel?.attributedText = attributedString
         }
 
         return cell

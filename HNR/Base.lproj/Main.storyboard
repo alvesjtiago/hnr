@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Ke-Ra-nEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Ke-Ra-nEf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="85" id="JVB-Wy-zHh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="85" id="JVB-Wy-zHh" customClass="NewsCell" customModule="HNR" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JVB-Wy-zHh" id="dLX-4k-Xy3">
@@ -47,9 +47,11 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpv-Yo-eG7">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpv-Yo-eG7">
                                             <rect key="frame" x="66" y="48" width="293" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="Dsn-k9-WtJ"/>
+                                            </constraints>
                                             <attributedString key="attributedText">
                                                 <fragment content="by ">
                                                     <attributes>
@@ -77,11 +79,19 @@
                                     <constraints>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="76F-m5-L6l"/>
                                         <constraint firstItem="fxI-0K-jY4" firstAttribute="top" secondItem="ZpE-R1-L1F" secondAttribute="bottom" constant="8" id="ARs-a3-aCB"/>
+                                        <constraint firstItem="Rpv-Yo-eG7" firstAttribute="top" secondItem="ZpE-R1-L1F" secondAttribute="bottom" constant="8" id="Edb-Dv-6Ol"/>
+                                        <constraint firstItem="Rpv-Yo-eG7" firstAttribute="leading" secondItem="fxI-0K-jY4" secondAttribute="trailing" constant="8" id="LOT-6s-5V8"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZpE-R1-L1F" secondAttribute="trailing" constant="8" id="M1Q-dq-XzA"/>
                                         <constraint firstItem="fxI-0K-jY4" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="Qg9-6h-Ifm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Rpv-Yo-eG7" secondAttribute="trailing" constant="8" id="WZs-K1-qCn"/>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="top" secondItem="dLX-4k-Xy3" secondAttribute="topMargin" constant="4" id="yH6-Mm-L91"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="Rpv-Yo-eG7" id="0Eb-Iu-FMD"/>
+                                    <outlet property="countLabel" destination="fxI-0K-jY4" id="Iw9-hY-1ui"/>
+                                    <outlet property="titleLabel" destination="ZpE-R1-L1F" id="u0L-IB-Ex9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -91,6 +101,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="hMD-01-qZT"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hWP-yg-sAq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
