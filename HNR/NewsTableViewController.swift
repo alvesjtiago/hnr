@@ -87,20 +87,26 @@ class NewsTableViewController: UITableViewController {
     
     func refreshNews() {
         var counter = 0
+        let size = 20
         let allNewNews : NSMutableArray = []
         
         Alamofire.request("https://hacker-news.firebaseio.com/v0/topstories.json").responseJSON { response in
             if response.result.value != nil {
                 
                 let arrayOfNews = response.result.value as! NSArray
-                for news in arrayOfNews.subarray(with: NSRange(location: 0, length: 10)) {
+                
+                for _ in arrayOfNews.subarray(with: NSRange(location: 0, length: size)) {
+                    allNewNews.add(NSNull.init())
+                }
+                
+                for (index, news) in arrayOfNews.subarray(with: NSRange(location: 0, length: size)).enumerated() {
                     Alamofire.request("https://hacker-news.firebaseio.com/v0/item/\(news).json").responseJSON { response in
                         counter += 1
                         if let JSON = response.result.value {
                             print("JSON: \(JSON)")
-                            allNewNews.add(JSON)
+                            allNewNews.replaceObject(at: index, with: JSON)
                         }
-                        if counter == 10 {
+                        if counter == size {
                             self.allNews = allNewNews
                             self.tableView.reloadData()
                             self.refreshControl?.endRefreshing()
