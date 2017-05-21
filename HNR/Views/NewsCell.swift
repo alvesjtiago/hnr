@@ -11,7 +11,7 @@ import UIKit
 class NewsCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel:UILabel?
-    @IBOutlet weak var countLabel:UILabel?
+    @IBOutlet weak var countLabel:RoundLabel?
     @IBOutlet weak var authorLabel:UILabel?
 
     override func awakeFromNib() {

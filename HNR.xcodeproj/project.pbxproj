@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		587A11425DCFB1976C8FA49B /* Pods_HNR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */; };
 		DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12F3541ECF4B7500627A37 /* NewsCell.swift */; };
+		DD84D1D71ED234DF0089898C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D61ED234DF0089898C /* News.swift */; };
+		DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D81ED235AB0089898C /* RoundLabel.swift */; };
 		DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */; };
 		DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA191E78915B00BD3933 /* AppDelegate.swift */; };
 		DDDADA211E78915B00BD3933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDADA1F1E78915B00BD3933 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		9E4A909A694A63AA75D1F683 /* Pods-HNR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.release.xcconfig"; sourceTree = "<group>"; };
 		BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.debug.xcconfig"; sourceTree = "<group>"; };
 		DD12F3541ECF4B7500627A37 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = Views/NewsCell.swift; sourceTree = "<group>"; };
+		DD84D1D61ED234DF0089898C /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		DD84D1D81ED235AB0089898C /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = Views/RoundLabel.swift; sourceTree = "<group>"; };
 		DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		DDDADA161E78915B00BD3933 /* HNR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDADA191E78915B00BD3933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +97,17 @@
 			isa = PBXGroup;
 			children = (
 				DD12F3541ECF4B7500627A37 /* NewsCell.swift */,
+				DD84D1D81ED235AB0089898C /* RoundLabel.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		DD84D1D51ED234B20089898C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD84D1D61ED234DF0089898C /* News.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DDDADA0D1E78915B00BD3933 = {
@@ -124,10 +137,11 @@
 			children = (
 				DDDADA191E78915B00BD3933 /* AppDelegate.swift */,
 				DD12F3561ECF5E1800627A37 /* Controllers */,
+				DD84D1D51ED234B20089898C /* Models */,
 				DD12F3571ECF5E4600627A37 /* Views */,
 				DDDADA221E78915B00BD3933 /* Assets.xcassets */,
-				DDDADA241E78915B00BD3933 /* LaunchScreen.storyboard */,
 				DDDADA1F1E78915B00BD3933 /* Main.storyboard */,
+				DDDADA241E78915B00BD3933 /* LaunchScreen.storyboard */,
 				DDDADA271E78915B00BD3933 /* Info.plist */,
 			);
 			path = HNR;
@@ -356,6 +370,8 @@
 			files = (
 				DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */,
 				DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */,
+				DD84D1D71ED234DF0089898C /* News.swift in Sources */,
+				DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */,
 				DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

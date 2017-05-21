@@ -46,19 +46,17 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsCell
 
-        let news = self.allNews[indexPath.row] as! NSDictionary
+        let news = self.allNews[indexPath.row] as! News
         
-        cell.titleLabel?.text = news.value(forKey: "title") as? String
+        cell.titleLabel?.text = news.title
         cell.titleLabel?.sizeToFit()
         
-        cell.countLabel?.layer.masksToBounds = true
-        cell.countLabel?.layer.cornerRadius = 11
-        cell.countLabel?.text = String(describing: news.value(forKey: "score") as! Int)
+        cell.countLabel?.text = String(describing: news.score!)
         
-        if news.value(forKey: "by") != nil {
-            let author = news.value(forKey: "by")
-            let attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 15)]
-            let boldString = NSMutableAttributedString(string: author as! String, attributes: attrs)
+        if news.by != nil {
+            let author = news.by
+            let attrs = [NSFontAttributeName : UIFont(name: "AvenirNext-Bold", size: 14) as Any]
+            let boldString = NSMutableAttributedString(string: author!, attributes: attrs)
             
             let attributedString = NSMutableAttributedString(string:"by ")
             attributedString.append(boldString)
@@ -70,24 +68,21 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let news = self.allNews[indexPath.row] as! NSDictionary
-        let title = news.value(forKey: "title") as? String
+        let news = self.allNews[indexPath.row] as! News
+        let title = news.title
         let constraintRect = CGSize(width: tableView.bounds.size.width - 32, height: CGFloat(MAXFLOAT))
         let boundingBox = title?.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20) as Any], context: nil)
         return (boundingBox!.height + 57.0)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let news = self.allNews[indexPath.row] as! NSDictionary
+        let news = self.allNews[indexPath.row] as! News
         
-        if let url = news.value(forKey: "url") {
-            let destination: URL = URL(string: url as! String)!
-            
-            let safari: SFSafariViewController = SFSafariViewController(url: destination)
+        if let url = news.url {
+            let safari: SFSafariViewController = SFSafariViewController(url: url)
             safari.preferredBarTintColor = UIColor(red:0.17, green:0.19, blue:0.27, alpha:1.00)
             
             self.present(safari, animated: true, completion: nil)
-            
         }
     }
     
@@ -110,7 +105,8 @@ class NewsTableViewController: UITableViewController {
                         counter += 1
                         if let JSON = response.result.value {
                             print("JSON: \(JSON)")
-                            allNewNews.replaceObject(at: index, with: JSON)
+                            let newsObject = News.init(json: (JSON as? NSDictionary)!)
+                            allNewNews.replaceObject(at: index, with: newsObject)
                         }
                         if counter == size {
                             self.allNews = allNewNews
