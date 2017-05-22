@@ -47,22 +47,7 @@ class NewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsCell
 
         let news = self.allNews[indexPath.row] as! News
-        
-        cell.titleLabel?.text = news.title
-        cell.titleLabel?.sizeToFit()
-        
-        cell.countLabel?.text = String(describing: news.score!)
-        
-        if news.by != nil {
-            let author = news.by
-            let attrs = [NSFontAttributeName : UIFont(name: "AvenirNext-Bold", size: 14) as Any]
-            let boldString = NSMutableAttributedString(string: author!, attributes: attrs)
-            
-            let attributedString = NSMutableAttributedString(string:"by ")
-            attributedString.append(boldString)
-            
-            cell.authorLabel?.attributedText = attributedString
-        }
+        cell.set(news: news)
 
         return cell
     }

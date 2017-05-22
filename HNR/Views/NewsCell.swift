@@ -13,16 +13,21 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var titleLabel:UILabel?
     @IBOutlet weak var countLabel:RoundLabel?
     @IBOutlet weak var authorLabel:UILabel?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func set(news: News) {
+        self.titleLabel?.text = news.title
+        self.countLabel?.text = String(describing: news.score!)
+        
+        if news.by != nil {
+            let author = news.by
+            let attrs = [NSFontAttributeName : UIFont(name: "AvenirNext-Bold", size: 14)!]
+            let boldString = NSAttributedString(string: author!, attributes: attrs)
+            
+            let attributedString = NSMutableAttributedString(string:"by ")
+            attributedString.append(boldString)
+            
+            self.authorLabel?.attributedText = attributedString
+        }
     }
 
 }
