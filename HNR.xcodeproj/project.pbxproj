@@ -18,6 +18,7 @@
 		DDDADA261E78915B00BD3933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDADA241E78915B00BD3933 /* LaunchScreen.storyboard */; };
 		DDDADA311E78915B00BD3933 /* HNRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA301E78915B00BD3933 /* HNRTests.swift */; };
 		DDDADA3C1E78915B00BD3933 /* HNRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA3B1E78915B00BD3933 /* HNRUITests.swift */; };
+		DDE1B3061ED33729009790A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE1B3051ED33729009790A5 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DDDADA371E78915B00BD3933 /* HNRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDADA3B1E78915B00BD3933 /* HNRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNRUITests.swift; sourceTree = "<group>"; };
 		DDDADA3D1E78915B00BD3933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE1B3051ED33729009790A5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDADA191E78915B00BD3933 /* AppDelegate.swift */,
+				DDE1B3051ED33729009790A5 /* API.swift */,
 				DD12F3561ECF5E1800627A37 /* Controllers */,
 				DD84D1D51ED234B20089898C /* Models */,
 				DD12F3571ECF5E4600627A37 /* Views */,
@@ -372,6 +375,7 @@
 				DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */,
 				DD84D1D71ED234DF0089898C /* News.swift in Sources */,
 				DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */,
+				DDE1B3061ED33729009790A5 /* API.swift in Sources */,
 				DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
