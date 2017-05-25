@@ -13,7 +13,7 @@ let baseURLString = "https://hacker-news.firebaseio.com/v0/"
 
 class API: NSObject {
     
-    public func fetchNews(size: Int, completionHandler: @escaping (Array<News>) -> Void) {
+    public func fetchNews(size: Int, completionHandler: @escaping (Bool, Array<News>) -> Void) {
         let allNewNews : NSMutableArray = []
         
         Alamofire.request(baseURLString + "topstories.json").responseJSON { response in
@@ -41,8 +41,11 @@ class API: NSObject {
                 }
                 
                 newsGroup.notify(queue: .main) {
-                    completionHandler(allNewNews as! Array<News>)
+                    completionHandler(true, allNewNews as! Array<News>)
                 }
+                
+            } else {
+                completionHandler(false, [])
             }
         }
     }

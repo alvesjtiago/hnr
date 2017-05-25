@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SafariServices
 
 let numberOfNews = 20
 
@@ -64,18 +63,23 @@ class NewsTableViewController: UITableViewController {
         let news = allNews[indexPath.row] as! News
         
         if let url = news.url {
-            let safari: SFSafariViewController = SFSafariViewController(url: url)
-            safari.preferredBarTintColor = UIColor(red:0.17, green:0.19, blue:0.27, alpha:1.00)
-            
+            let safari: CustomWebViewController = CustomWebViewController(url: url)
             self.present(safari, animated: true, completion: nil)
         }
     }
     
     func refreshNews() {
-        API.init().fetchNews(size: numberOfNews) { (news) in
+        API.init().fetchNews(size: numberOfNews) { (success, news) in
+            
+            // Update array of news and interface
             self.allNews = news as! NSMutableArray
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
+            
+            if (!success) {
+                // Display error
+            }
+            
         }
     }
 
