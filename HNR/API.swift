@@ -13,6 +13,10 @@ let baseURLString = "https://hacker-news.firebaseio.com/v0/"
 
 class API: NSObject {
     
+    static let sharedInstance = API()
+    
+    private override init() {} // Prevents outside calling of init
+    
     public func fetchNews(size: Int, completionHandler: @escaping (Bool, Array<News>) -> Void) {
         let allNewNews : NSMutableArray = []
         

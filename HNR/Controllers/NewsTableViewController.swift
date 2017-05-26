@@ -69,7 +69,7 @@ class NewsTableViewController: UITableViewController {
     }
     
     func refreshNews() {
-        API.init().fetchNews(size: numberOfNews) { (success, news) in
+        API.sharedInstance.fetchNews(size: numberOfNews) { (success, news) in
             
             // Update array of news and interface
             self.allNews = news as! NSMutableArray
