@@ -17,6 +17,9 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 85.0
+        
         // Trigger refresh news when pull to refres is triggered
         self.refreshControl?.addTarget(self, action: #selector(refreshNews), for: UIControlEvents.valueChanged)
         
@@ -43,20 +46,6 @@ class NewsTableViewController: UITableViewController {
         cell.set(news: news)
 
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Calculate height of title
-        let news = allNews[indexPath.row] as! News
-        let title = news.title
-        let constraintRect = CGSize(width: tableView.bounds.size.width - 32,
-                                    height: CGFloat(MAXFLOAT))
-        let boundingBox = title?.boundingRect(with: constraintRect,
-                                              options: .usesLineFragmentOrigin,
-                                              attributes: [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20) as Any],
-                                              context: nil)
-        
-        return (boundingBox!.height + 57.0)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
