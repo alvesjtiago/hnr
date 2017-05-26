@@ -78,6 +78,14 @@ class NewsTableViewController: UITableViewController {
             
             if (!success) {
                 // Display error
+                let alertView: UIAlertController = UIAlertController.init(title: "Error fetching news",
+                                                                          message: "There was an error fetching the new Hacker News articles. Please make sure you're connected to the internet and try again.",
+                                                                          preferredStyle: .alert)
+                let dismissButton: UIAlertAction = UIAlertAction.init(title: "OK",
+                                                                      style: .default,
+                                                                      handler: nil)
+                alertView.addAction(dismissButton)
+                self.present(alertView, animated: true, completion: nil)
             }
             
         }
