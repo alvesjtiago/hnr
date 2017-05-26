@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Ke-Ra-nEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Ke-Ra-nEf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -80,7 +80,9 @@
                                         <constraint firstItem="Rpv-Yo-eG7" firstAttribute="leading" secondItem="fxI-0K-jY4" secondAttribute="trailing" constant="8" id="LOT-6s-5V8"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZpE-R1-L1F" secondAttribute="trailing" constant="8" id="M1Q-dq-XzA"/>
                                         <constraint firstItem="fxI-0K-jY4" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="Qg9-6h-Ifm"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rpv-Yo-eG7" secondAttribute="bottom" constant="14.5" id="RfF-ln-CJc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Rpv-Yo-eG7" secondAttribute="trailing" constant="8" id="WZs-K1-qCn"/>
+                                        <constraint firstAttribute="bottom" secondItem="fxI-0K-jY4" secondAttribute="bottom" constant="14.5" id="mWR-lh-UFw"/>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="top" secondItem="dLX-4k-Xy3" secondAttribute="topMargin" constant="4" id="yH6-Mm-L91"/>
                                     </constraints>
                                 </tableViewCellContentView>
