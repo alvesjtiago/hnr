@@ -1,14 +1,14 @@
 # HackerNews Rebuilt
 
-![View of the HackerNews app for iOS running on an iPhone](http://i.imgur.com/kaf19Bd.jpg)
+![View of the HackerNews app for iOS running on an iPhone](http://i.imgur.com/n5jkOfJ.jpg)
 
-An HackerNews app for iOS inspired by the design of [Cai Cardenas](https://dribbble.com/shots/2057590-Hacker-News-iPhone-App) using the Firebase HackerNews API and Swift 3.
+A HackerNews app for iOS inspired by the design of [Cai Cardenas](https://dribbble.com/shots/2057590-Hacker-News-iPhone-App) using the Firebase HackerNews API and Swift 3.
 
 ## Motivation
 
 This project serves multiple purposes:
 * Serve as a reference application for the development of applications in Swift 3
-* Create an HackerNews application available as Open Source with a pleasant design
+* Create a HackerNews application available as Open Source with a pleasant design
 * Get feedback from the community about the current best practices on iOS development
 
 ## Installation
