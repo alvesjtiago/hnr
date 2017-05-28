@@ -17,15 +17,16 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set automatic height calculation for cells
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 85.0
         
         // Trigger refresh news when pull to refres is triggered
-        self.refreshControl?.addTarget(self, action: #selector(refreshNews), for: UIControlEvents.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(refreshNews), for: UIControlEvents.valueChanged)
         
         // Start refresh when view is loaded
-        self.tableView.setContentOffset(CGPoint(x: 0, y: self.tableView.contentOffset.y - 30), animated: false)
-        self.tableView.refreshControl?.beginRefreshing()
+        tableView.setContentOffset(CGPoint(x: 0, y: tableView.contentOffset.y - 30), animated: false)
+        tableView.refreshControl?.beginRefreshing()
         refreshNews()
     }
 
