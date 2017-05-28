@@ -8,7 +8,7 @@ A HackerNews app for iOS using the Firebase API and Swift 3.
 
 This project has multiple purposes:
 * Serve as a reference for the development of applications in Swift 3
-* Create a HackerNews application available as Open Source with good design
+* Create a HackerNews application available as Open Source
 * Get feedback from the community about the current best practices on Swift 3 for iOS development
 
 ## Installation
