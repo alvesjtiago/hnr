@@ -15,7 +15,7 @@ class CustomWebViewController: SFSafariViewController {
         super.viewDidLoad()
         
         // Change color
-        self.preferredBarTintColor = UIColor(red:0.17, green:0.19, blue:0.27, alpha:1.00)
+        preferredBarTintColor = UIColor(red:0.17, green:0.19, blue:0.27, alpha:1.00)
     }
     
 }

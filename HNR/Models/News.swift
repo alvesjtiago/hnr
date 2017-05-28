@@ -16,11 +16,11 @@ class News: NSObject {
     
     convenience init(json: NSDictionary) {
         self.init()
-        self.title = json.value(forKey: "title") as? String
-        self.score = json.value(forKey: "score") as? Int
-        self.by    = json.value(forKey: "by")    as? String
+        title = json.value(forKey: "title") as? String
+        score = json.value(forKey: "score") as? Int
+        by    = json.value(forKey: "by")    as? String
         if let urlString = json.value(forKey: "url") as? String {
-            self.url   = URL(string: urlString)
+            url   = URL(string: urlString)
         }
     }
 }

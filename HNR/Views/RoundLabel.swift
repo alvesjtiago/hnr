@@ -14,8 +14,8 @@ class RoundLabel: UILabel {
         super.draw(rect)
         
         // Make it round
-        self.layer.masksToBounds = true
-        self.layer.cornerRadius = rect.size.height / 2
+        layer.masksToBounds = true
+        layer.cornerRadius = rect.size.height / 2
     }
 
 }

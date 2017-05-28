@@ -54,7 +54,7 @@ class NewsTableViewController: UITableViewController {
         
         if let url = news.url {
             let safari: CustomWebViewController = CustomWebViewController(url: url)
-            self.present(safari, animated: true, completion: nil)
+            present(safari, animated: true, completion: nil)
         }
     }
     

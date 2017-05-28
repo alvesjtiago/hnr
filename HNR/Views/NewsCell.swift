@@ -15,8 +15,8 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var authorLabel:UILabel?
     
     func set(news: News) {
-        self.titleLabel?.text = news.title
-        self.countLabel?.text = String(describing: news.score!)
+        titleLabel?.text = news.title
+        countLabel?.text = String(describing: news.score!)
         
         if news.by != nil {
             let author = news.by
@@ -26,7 +26,7 @@ class NewsCell: UITableViewCell {
             let attributedString = NSMutableAttributedString(string:"by ")
             attributedString.append(boldString)
             
-            self.authorLabel?.attributedText = attributedString
+            authorLabel?.attributedText = attributedString
         }
     }
 
