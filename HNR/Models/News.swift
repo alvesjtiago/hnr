@@ -9,6 +9,7 @@
 import UIKit
 
 class News: NSObject {
+    var id:    Int?
     var title: String?
     var score: Int?
     var by:    String?
@@ -16,6 +17,7 @@ class News: NSObject {
     
     convenience init(json: NSDictionary) {
         self.init()
+        id    = json.value(forKey: "id")    as? Int
         title = json.value(forKey: "title") as? String
         score = json.value(forKey: "score") as? Int
         by    = json.value(forKey: "by")    as? String

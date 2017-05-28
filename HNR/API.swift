@@ -13,39 +13,38 @@ let baseURLString = "https://hacker-news.firebaseio.com/v0/"
 
 class API: NSObject {
     
+    // Singleton creation
     static let sharedInstance = API()
-    
     private override init() {} // Prevents outside calling of init
     
-    public func fetchNews(size: Int, completionHandler: @escaping (Bool, Array<News>) -> Void) {
-        let allNewNews : NSMutableArray = []
+    // Fetch top stories
+    public func fetchNews(size: Int, completionHandler: @escaping (Bool, [News]) -> Void) {
         
         Alamofire.request(baseURLString + "topstories.json").responseJSON { response in
-            if response.result.value != nil {
+            if var topstoriesJSON = response.result.value as? NSArray {
+                topstoriesJSON = topstoriesJSON.subarray(with: NSRange(location: 0, length: size)) as NSArray
                 
-                var arrayOfNews = response.result.value as! NSArray
-                arrayOfNews = arrayOfNews.subarray(with: NSRange(location: 0, length: size)) as NSArray
-                
-                for _ in arrayOfNews {
-                    allNewNews.add(NSNull.init())
-                }
+                var returnNews : [News] = []
                 
                 let newsGroup = DispatchGroup()
-                
-                for (index, news) in arrayOfNews.enumerated() {
+                for (_, news) in topstoriesJSON.enumerated() {
                     newsGroup.enter()
                     
                     Alamofire.request(baseURLString + "item/\(news).json").responseJSON { response in
-                        if let JSON = response.result.value {
-                            let newsObject = News.init(json: (JSON as? NSDictionary)!)
-                            allNewNews.replaceObject(at: index, with: newsObject)
+                        if let newsJSON = response.result.value as? NSDictionary {
+                            let newsObject = News.init(json: newsJSON)
+                            returnNews.append(newsObject)
                         }
                         newsGroup.leave()
                     }
                 }
                 
                 newsGroup.notify(queue: .main) {
-                    completionHandler(true, allNewNews as! Array<News>)
+                    returnNews.sort {a, b in
+                        topstoriesJSON.index(of: a.id!) < topstoriesJSON.index(of: b.id!)
+                    }
+                    
+                    completionHandler(true, returnNews)
                 }
                 
             } else {
