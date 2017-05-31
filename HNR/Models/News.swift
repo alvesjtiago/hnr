@@ -22,7 +22,9 @@ class News: NSObject {
         score = json.value(forKey: "score") as? Int
         by    = json.value(forKey: "by")    as? String
         if let urlString = json.value(forKey: "url") as? String {
-            url   = URL(string: urlString)
+            url = URL(string: urlString)
+        } else {
+            url = URL(string: "https://news.ycombinator.com/item?id=" + String(describing: id!))
         }
     }
 }

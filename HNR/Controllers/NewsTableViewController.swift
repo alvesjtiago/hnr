@@ -8,7 +8,7 @@
 
 import UIKit
 
-let numberOfNews = 20
+let numberOfNews = 30
 
 class NewsTableViewController: UITableViewController {
     
