@@ -88,7 +88,7 @@ class NewsTableViewController: UITableViewController {
     @IBAction func longPressed(sender: UILongPressGestureRecognizer)
     {
         let newsCell:NewsCell = (sender.view as? NewsCell)!
-        if let myWebsite = newsCell.news?.url! {
+        if let myWebsite = newsCell.news?.url {
             let objectsToShare = [myWebsite]
             let activityVC = UIActivityViewController(activityItems: objectsToShare,
                                                       applicationActivities: nil)
