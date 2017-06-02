@@ -42,7 +42,10 @@ class NewsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsCell
-
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed(sender:)))
+        cell.addGestureRecognizer(longPressRecognizer)
+        
         let news = allNews[indexPath.row] as! News
         cell.set(news: news)
 
@@ -78,6 +81,18 @@ class NewsTableViewController: UITableViewController {
                 self.present(alertView, animated: true, completion: nil)
             }
             
+        }
+    }
+    
+    
+    @IBAction func longPressed(sender: UILongPressGestureRecognizer)
+    {
+        let newsCell:NewsCell = (sender.view as? NewsCell)!
+        if let myWebsite = newsCell.news?.url! {
+            let objectsToShare = [myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare,
+                                                      applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
         }
     }
 

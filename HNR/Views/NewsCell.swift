@@ -10,11 +10,14 @@ import UIKit
 
 class NewsCell: UITableViewCell {
     
+    var news: News?
     @IBOutlet weak var titleLabel:  UILabel?
     @IBOutlet weak var countLabel:  RoundLabel?
     @IBOutlet weak var authorLabel: UILabel?
     
     func set(news: News) {
+        self.news = news
+        
         titleLabel?.text = news.title!
         countLabel?.text = String(describing: news.score!)
         

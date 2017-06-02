@@ -86,6 +86,7 @@
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="top" secondItem="dLX-4k-Xy3" secondAttribute="topMargin" constant="4" id="yH6-Mm-L91"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="authorLabel" destination="Rpv-Yo-eG7" id="0Eb-Iu-FMD"/>
                                     <outlet property="countLabel" destination="fxI-0K-jY4" id="Iw9-hY-1ui"/>
