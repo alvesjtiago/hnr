@@ -10,6 +10,7 @@
 		587A11425DCFB1976C8FA49B /* Pods_HNR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */; };
 		DD093EDC1ED773CB007BDDC0 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */; };
 		DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12F3541ECF4B7500627A37 /* NewsCell.swift */; };
+		DD6983CB1F696DC50064D391 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */; };
 		DD84D1D71ED234DF0089898C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D61ED234DF0089898C /* News.swift */; };
 		DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D81ED235AB0089898C /* RoundLabel.swift */; };
 		DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */; };
@@ -44,6 +45,7 @@
 		BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.debug.xcconfig"; sourceTree = "<group>"; };
 		DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
 		DD12F3541ECF4B7500627A37 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = Views/NewsCell.swift; sourceTree = "<group>"; };
+		DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		DD84D1D61ED234DF0089898C /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		DD84D1D81ED235AB0089898C /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = Views/RoundLabel.swift; sourceTree = "<group>"; };
 		DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */,
 				DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */,
+				DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -349,7 +352,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A77CCBB9F39373A1E36CFE4B /* [CP] Copy Pods Resources */ = {
@@ -378,6 +381,7 @@
 				DD093EDC1ED773CB007BDDC0 /* CustomWebViewController.swift in Sources */,
 				DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */,
 				DD84D1D71ED234DF0089898C /* News.swift in Sources */,
+				DD6983CB1F696DC50064D391 /* SettingsTableViewController.swift in Sources */,
 				DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */,
 				DDE1B3061ED33729009790A5 /* API.swift in Sources */,
 				DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */,
