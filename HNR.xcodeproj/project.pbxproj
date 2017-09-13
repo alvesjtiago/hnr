@@ -10,6 +10,8 @@
 		587A11425DCFB1976C8FA49B /* Pods_HNR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */; };
 		DD093EDC1ED773CB007BDDC0 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */; };
 		DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12F3541ECF4B7500627A37 /* NewsCell.swift */; };
+		DD5972C11F69F562009AA4AA /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = DD5972BF1F69F562009AA4AA /* fabric.apikey */; };
+		DD5972C21F69F562009AA4AA /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = DD5972C01F69F562009AA4AA /* fabric.buildsecret */; };
 		DD84D1D71ED234DF0089898C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D61ED234DF0089898C /* News.swift */; };
 		DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D81ED235AB0089898C /* RoundLabel.swift */; };
 		DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */; };
@@ -44,6 +46,8 @@
 		BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.debug.xcconfig"; sourceTree = "<group>"; };
 		DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
 		DD12F3541ECF4B7500627A37 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = Views/NewsCell.swift; sourceTree = "<group>"; };
+		DD5972BF1F69F562009AA4AA /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = SOURCE_ROOT; };
+		DD5972C01F69F562009AA4AA /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = SOURCE_ROOT; };
 		DD84D1D61ED234DF0089898C /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		DD84D1D81ED235AB0089898C /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = Views/RoundLabel.swift; sourceTree = "<group>"; };
 		DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		DD5972BE1F69EF43009AA4AA /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				DD5972BF1F69F562009AA4AA /* fabric.apikey */,
+				DD5972C01F69F562009AA4AA /* fabric.buildsecret */,
+			);
+			name = Keys;
+			sourceTree = "<group>";
+		};
 		DD84D1D51ED234B20089898C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 		DDDADA181E78915B00BD3933 /* HNR */ = {
 			isa = PBXGroup;
 			children = (
+				DD5972BE1F69EF43009AA4AA /* Keys */,
 				DDDADA191E78915B00BD3933 /* AppDelegate.swift */,
 				DDE1B3051ED33729009790A5 /* API.swift */,
 				DD12F3561ECF5E1800627A37 /* Controllers */,
@@ -201,6 +215,7 @@
 				DDDADA141E78915B00BD3933 /* Resources */,
 				5FC4A7BD3D944351D7198EDC /* [CP] Embed Pods Frameworks */,
 				A77CCBB9F39373A1E36CFE4B /* [CP] Copy Pods Resources */,
+				DD5972B91F69E75B009AA4AA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -259,8 +274,8 @@
 				TargetAttributes = {
 					DDDADA151E78915B00BD3933 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3JQ36LEA79;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = Z7XW95HDSC;
+						ProvisioningStyle = Manual;
 					};
 					DDDADA2B1E78915B00BD3933 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -299,7 +314,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD5972C21F69F562009AA4AA /* fabric.buildsecret in Resources */,
 				DDDADA261E78915B00BD3933 /* LaunchScreen.storyboard in Resources */,
+				DD5972C11F69F562009AA4AA /* fabric.apikey in Resources */,
 				DDDADA231E78915B00BD3933 /* Assets.xcassets in Resources */,
 				DDDADA211E78915B00BD3933 /* Main.storyboard in Resources */,
 			);
@@ -349,7 +366,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A77CCBB9F39373A1E36CFE4B /* [CP] Copy Pods Resources */ = {
@@ -366,6 +383,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNR/Pods-HNR-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DD5972B91F69E75B009AA4AA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FABRIC_APIKEY_FILE=\"${SRCROOT}/fabric.apikey\"\nFABRIC_BUILDSECRET_FILE=\"${SRCROOT}/fabric.buildsecret\"\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\nif test ! -f \"$FABRIC_APIKEY_FILE\" -o ! -f \"$FABRIC_BUILDSECRET_FILE\"; then\necho \"This build wants to upload dSYM files to Crashlytics.\"\necho \"Uploading is possible only if a Fabric API key and a Fabric build secret are\"\necho \"available. This build is failing because at least one of these pieces of\"\necho \"information is missing.\"\necho \"\"\necho \"To fix the problem, create the following files and store the API key and\"\necho \"build secret, respectively, within those files:\"\necho \"\"\necho \"  $FABRIC_APIKEY_FILE\"\necho \"  $FABRIC_BUILDSECRET_FILE\"\necho \"\"\necho \"If you forked the project then you must register with Crashlytics and\"\necho \"get your own API key and build secret.\"\n\n# Let the build fail\nexit 1\nfi\n\nFABRIC_APIKEY=$(cat \"$FABRIC_APIKEY_FILE\")\nif test $? -ne 0; then\necho \"Cannot read $FABRIC_APIKEY_FILE\"\nexit 1\nfi\n\nFABRIC_BUILDSECRET=$(cat \"$FABRIC_BUILDSECRET_FILE\")\nif test $? -ne 0; then\necho \"Cannot read $FABRIC_BUILDSECRET_FILE\"\nexit 1\nfi\n\necho \"Uploading dSYM files to Crashlytics\"\n\"${PODS_ROOT}/Fabric/run\" \"$FABRIC_APIKEY\" \"$FABRIC_BUILDSECRET\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -533,11 +563,13 @@
 			baseConfigurationReference = BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3JQ36LEA79;
+				DEVELOPMENT_TEAM = Z7XW95HDSC;
 				INFOPLIST_FILE = HNR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iterar.HNR;
+				PRODUCT_BUNDLE_IDENTIFIER = me.tiagoalves.hnr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ea3925ef-414e-4e22-af57-569a4bd28eb4";
+				PROVISIONING_PROFILE_SPECIFIER = "HNr Development";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -548,11 +580,14 @@
 			baseConfigurationReference = 9E4A909A694A63AA75D1F683 /* Pods-HNR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3JQ36LEA79;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = Z7XW95HDSC;
 				INFOPLIST_FILE = HNR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.iterar.HNR;
+				PRODUCT_BUNDLE_IDENTIFIER = me.tiagoalves.hnr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "efa3fc10-507c-414b-b58a-20a9bf9f837c";
+				PROVISIONING_PROFILE_SPECIFIER = "HNr AdHoc";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

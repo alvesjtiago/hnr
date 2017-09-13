@@ -35,3 +35,7 @@ xcuserdata/
 
 ## Swift Package Manager
 .build/
+
+## Keys
+fabric.apikey
+fabric.buildsecret
