@@ -29,7 +29,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HNR app for iOS hits the stores with things and other stuff" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpE-R1-L1F">
                                             <rect key="frame" x="16" y="12" width="343" height="28"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -133,49 +133,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="lg2-DU-4rG">
-                            <rect key="frame" x="0.0" y="204" width="375" height="1"/>
+                            <rect key="frame" x="0.0" y="102" width="375" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <sections>
                             <tableViewSection id="2oA-Vd-fVq">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingsCell" textLabel="3PU-nC-WMs" rowHeight="51" style="IBUITableViewCellStyleDefault" id="Vj4-3D-H0s">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vj4-3D-H0s" id="9Nn-uk-qet">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="50.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3PU-nC-WMs">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="50.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingsCell" textLabel="Q4l-QE-0eG" rowHeight="51" style="IBUITableViewCellStyleDefault" id="OEv-R2-swa">
-                                        <rect key="frame" x="0.0" y="51" width="375" height="51"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OEv-R2-swa" id="H4x-KS-eka">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="50.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q4l-QE-0eG">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="50.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingsCell" textLabel="c14-vI-JA8" rowHeight="51" style="IBUITableViewCellStyleDefault" id="4aa-r5-y0q">
-                                        <rect key="frame" x="0.0" y="102" width="375" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4aa-r5-y0q" id="wLw-l9-mOC">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="50.5"/>
@@ -184,7 +150,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Licenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c14-vI-JA8">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="50.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -195,7 +161,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingsCell" textLabel="Uwo-pM-KTB" rowHeight="51" style="IBUITableViewCellStyleDefault" id="FOl-cX-HJo">
-                                        <rect key="frame" x="0.0" y="153" width="375" height="51"/>
+                                        <rect key="frame" x="0.0" y="51" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FOl-cX-HJo" id="Gzd-dh-BSF">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="50.5"/>
@@ -204,12 +170,15 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uwo-pM-KTB">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="50.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Q52-ue-ZCe" kind="show" id="HEu-Iq-lf1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -226,6 +195,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k02-96-ka8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753" y="534"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="imK-7r-8um">
+            <objects>
+                <viewController title="About" automaticallyAdjustsScrollViewInsets="NO" id="Q52-ue-ZCe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kMm-z3-Uzd"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFW-Wb-z0V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7oB-1K-eQI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-cJ-CeS" customClass="PaddingTextView" customModule="HNR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">HNr is the perfect Hacker News reader built with native iOS technologies (Firebase HN API and Swift 3).
+
+It is available as an OpenSource project on Github where everyone can contribute (https://github.com/alvesjtiago/hnr).</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insets">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBg-cJ-CeS" firstAttribute="leading" secondItem="7oB-1K-eQI" secondAttribute="leading" id="5ad-6k-XaX"/>
+                            <constraint firstAttribute="trailing" secondItem="cBg-cJ-CeS" secondAttribute="trailing" id="Juh-gE-TpE"/>
+                            <constraint firstItem="pFW-Wb-z0V" firstAttribute="top" secondItem="cBg-cJ-CeS" secondAttribute="bottom" id="S45-yU-XPp"/>
+                            <constraint firstItem="cBg-cJ-CeS" firstAttribute="top" secondItem="kMm-z3-Uzd" secondAttribute="bottom" id="Zsn-Ds-gnd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0b-Pr-4ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552.8" y="999.85007496251887"/>
         </scene>
         <!--Jobs-->
         <scene sceneID="W4e-4S-9fa">
@@ -246,23 +263,12 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HNr is hiring" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UB-n9-bYx">
                                             <rect key="frame" x="16" y="12" width="343" height="28"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWh-fb-Dsz" customClass="RoundLabel" customModule="HNR" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="48" width="42" height="22"/>
-                                            <color key="backgroundColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="42" id="K2L-xJ-R21"/>
-                                                <constraint firstAttribute="height" constant="22" id="vfe-hn-7eb"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-VL-E4p">
-                                            <rect key="frame" x="66" y="48" width="293" height="22"/>
+                                            <rect key="frame" x="16" y="48" width="343" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="ddO-4P-p64"/>
                                             </constraints>
@@ -287,11 +293,8 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="xDH-VL-E4p" secondAttribute="trailing" constant="8" id="5wo-PR-sW5"/>
                                         <constraint firstItem="xDH-VL-E4p" firstAttribute="top" secondItem="6UB-n9-bYx" secondAttribute="bottom" constant="8" id="9RB-9T-ddy"/>
-                                        <constraint firstAttribute="bottom" secondItem="lWh-fb-Dsz" secondAttribute="bottom" constant="14.5" id="GbJ-qj-rtZ"/>
-                                        <constraint firstItem="lWh-fb-Dsz" firstAttribute="leading" secondItem="Imu-hq-hsN" secondAttribute="leadingMargin" constant="8" id="QVH-vS-9SA"/>
+                                        <constraint firstItem="xDH-VL-E4p" firstAttribute="leading" secondItem="Imu-hq-hsN" secondAttribute="leadingMargin" constant="8" id="QRb-r8-1HT"/>
                                         <constraint firstItem="6UB-n9-bYx" firstAttribute="leading" secondItem="Imu-hq-hsN" secondAttribute="leadingMargin" constant="8" id="Tdo-Lo-ToM"/>
-                                        <constraint firstItem="xDH-VL-E4p" firstAttribute="leading" secondItem="lWh-fb-Dsz" secondAttribute="trailing" constant="8" id="TwH-eD-K4T"/>
-                                        <constraint firstItem="lWh-fb-Dsz" firstAttribute="top" secondItem="6UB-n9-bYx" secondAttribute="bottom" constant="8" id="WKA-cM-UIx"/>
                                         <constraint firstItem="6UB-n9-bYx" firstAttribute="top" secondItem="Imu-hq-hsN" secondAttribute="topMargin" constant="4" id="Zkk-Xe-XPJ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6UB-n9-bYx" secondAttribute="trailing" constant="8" id="c5u-UT-pxt"/>
                                         <constraint firstAttribute="bottom" secondItem="xDH-VL-E4p" secondAttribute="bottom" constant="14.5" id="tIx-Yd-Tq2"/>
@@ -300,7 +303,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outlet property="authorLabel" destination="xDH-VL-E4p" id="uh4-sk-aSD"/>
-                                    <outlet property="countLabel" destination="lWh-fb-Dsz" id="YmF-ja-Um4"/>
                                     <outlet property="titleLabel" destination="6UB-n9-bYx" id="cME-wL-SxV"/>
                                 </connections>
                             </tableViewCell>
@@ -314,6 +316,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="G00-56-jqh"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="zBm-v5-AIG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
@@ -326,7 +329,7 @@
             <objects>
                 <navigationController id="GGk-sm-NuV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Jobs" image="jobs" selectedImage="jobs-filled" id="XfM-Pa-DOI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="xkx-bI-DbH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="xkx-bI-DbH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99215686274509807" green="0.42745098039215684" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,73 +358,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z17-pR-laM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-2V-lzI" customClass="PaddingTextView" customModule="HNR" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXy-Ol-m29">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-Ey-fxF">
-                                                <rect key="frame" x="25" y="28" width="325" height="67"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="67" id="xSv-vc-HfT"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Icons provided by Icon8 (">
-                                                        <attributes>
-                                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="https://icons8.com">
-                                                        <attributes>
-                                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                            <url key="NSLink" string="https://icons8.com"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content">).
-Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string>
-                                                        <attributes>
-                                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="J2Z-Ey-fxF" secondAttribute="trailing" constant="25" id="Dv3-Zd-e1S"/>
-                                            <constraint firstItem="J2Z-Ey-fxF" firstAttribute="top" secondItem="aXy-Ol-m29" secondAttribute="top" constant="28" id="H8U-RL-Sjv"/>
-                                            <constraint firstItem="J2Z-Ey-fxF" firstAttribute="leading" secondItem="aXy-Ol-m29" secondAttribute="leading" constant="25" id="gfg-UI-uGq"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="aXy-Ol-m29" secondAttribute="trailing" id="8Eu-9a-d8Q"/>
-                                    <constraint firstItem="aXy-Ol-m29" firstAttribute="top" secondItem="z17-pR-laM" secondAttribute="top" id="VXE-Vi-3fn"/>
-                                    <constraint firstAttribute="bottom" secondItem="aXy-Ol-m29" secondAttribute="bottom" id="VdZ-4Z-4rJ"/>
-                                    <constraint firstItem="aXy-Ol-m29" firstAttribute="centerX" secondItem="z17-pR-laM" secondAttribute="centerX" id="cxV-Yh-xkD"/>
-                                    <constraint firstItem="aXy-Ol-m29" firstAttribute="centerY" secondItem="z17-pR-laM" secondAttribute="centerY" id="nvA-4I-clR"/>
-                                    <constraint firstItem="aXy-Ol-m29" firstAttribute="leading" secondItem="z17-pR-laM" secondAttribute="leading" id="ssd-F6-gE3"/>
-                                </constraints>
-                            </scrollView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Icons provided by Icon8 (https://icons8.com).
+
+Alamofire used for networking (https://github.com/Alamofire/Alamofire). 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/). Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="9" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insets">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z17-pR-laM" firstAttribute="leading" secondItem="RLj-4H-u1S" secondAttribute="leading" id="LwQ-En-UZT"/>
-                            <constraint firstAttribute="trailing" secondItem="z17-pR-laM" secondAttribute="trailing" id="YEw-Mm-oEh"/>
-                            <constraint firstItem="z17-pR-laM" firstAttribute="top" secondItem="IKI-xk-Wvq" secondAttribute="bottom" id="at1-gF-Po9"/>
-                            <constraint firstItem="dv6-IU-wne" firstAttribute="top" secondItem="z17-pR-laM" secondAttribute="bottom" id="rVu-iq-6wM"/>
+                            <constraint firstItem="dL2-2V-lzI" firstAttribute="top" secondItem="IKI-xk-Wvq" secondAttribute="bottom" id="HU2-iy-47X"/>
+                            <constraint firstItem="dv6-IU-wne" firstAttribute="top" secondItem="dL2-2V-lzI" secondAttribute="bottom" id="XQo-d6-CiS"/>
+                            <constraint firstItem="dL2-2V-lzI" firstAttribute="leading" secondItem="RLj-4H-u1S" secondAttribute="leading" id="YlU-km-Qc9"/>
+                            <constraint firstAttribute="trailing" secondItem="dL2-2V-lzI" secondAttribute="trailing" id="Zjo-rt-hOt"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKM-zv-i1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="534"/>
+            <point key="canvasLocation" x="1552.8" y="318.89055472263868"/>
         </scene>
         <!--Settings-->
         <scene sceneID="dFg-yR-Wsy">
@@ -449,7 +431,7 @@ Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string
         <scene sceneID="Qbg-Qe-jcw">
             <objects>
                 <tabBarController id="clg-q7-2Oq" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="4Yx-0s-KZv">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="4Yx-0s-KZv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
