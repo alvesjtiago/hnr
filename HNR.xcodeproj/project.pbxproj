@@ -10,9 +10,12 @@
 		587A11425DCFB1976C8FA49B /* Pods_HNR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */; };
 		DD093EDC1ED773CB007BDDC0 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */; };
 		DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12F3541ECF4B7500627A37 /* NewsCell.swift */; };
-		DD6983CB1F696DC50064D391 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */; };
 		DD5972C11F69F562009AA4AA /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = DD5972BF1F69F562009AA4AA /* fabric.apikey */; };
 		DD5972C21F69F562009AA4AA /* fabric.buildsecret in Resources */ = {isa = PBXBuildFile; fileRef = DD5972C01F69F562009AA4AA /* fabric.buildsecret */; };
+		DD6983CB1F696DC50064D391 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */; };
+		DD7902251F6DEEA900DEBDD5 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7902241F6DEEA900DEBDD5 /* JobsTableViewController.swift */; };
+		DD7902271F6DEF2600DEBDD5 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7902261F6DEF2600DEBDD5 /* Job.swift */; };
+		DD79022B1F6DEFC300DEBDD5 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD79022A1F6DEFC300DEBDD5 /* JobCell.swift */; };
 		DD84D1D71ED234DF0089898C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D61ED234DF0089898C /* News.swift */; };
 		DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84D1D81ED235AB0089898C /* RoundLabel.swift */; };
 		DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */; };
@@ -47,9 +50,12 @@
 		BF1FB638D0969F4D0BB66629 /* Pods-HNR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNR/Pods-HNR.debug.xcconfig"; sourceTree = "<group>"; };
 		DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
 		DD12F3541ECF4B7500627A37 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsCell.swift; path = Views/NewsCell.swift; sourceTree = "<group>"; };
-		DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		DD5972BF1F69F562009AA4AA /* fabric.apikey */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.apikey; sourceTree = SOURCE_ROOT; };
 		DD5972C01F69F562009AA4AA /* fabric.buildsecret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = SOURCE_ROOT; };
+		DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		DD7902241F6DEEA900DEBDD5 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
+		DD7902261F6DEF2600DEBDD5 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		DD79022A1F6DEFC300DEBDD5 /* JobCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		DD84D1D61ED234DF0089898C /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		DD84D1D81ED235AB0089898C /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = Views/RoundLabel.swift; sourceTree = "<group>"; };
 		DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			children = (
 				DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */,
 				DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */,
+				DD7902241F6DEEA900DEBDD5 /* JobsTableViewController.swift */,
 				DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
@@ -109,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				DD12F3541ECF4B7500627A37 /* NewsCell.swift */,
+				DD79022A1F6DEFC300DEBDD5 /* JobCell.swift */,
 				DD84D1D81ED235AB0089898C /* RoundLabel.swift */,
 			);
 			name = Views;
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				DD84D1D61ED234DF0089898C /* News.swift */,
+				DD7902261F6DEF2600DEBDD5 /* Job.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -409,12 +418,15 @@
 			files = (
 				DD9C2FED1E7897C20062B760 /* NewsTableViewController.swift in Sources */,
 				DD093EDC1ED773CB007BDDC0 /* CustomWebViewController.swift in Sources */,
+				DD79022B1F6DEFC300DEBDD5 /* JobCell.swift in Sources */,
 				DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */,
 				DD84D1D71ED234DF0089898C /* News.swift in Sources */,
 				DD6983CB1F696DC50064D391 /* SettingsTableViewController.swift in Sources */,
 				DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */,
 				DDE1B3061ED33729009790A5 /* API.swift in Sources */,
 				DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */,
+				DD7902251F6DEEA900DEBDD5 /* JobsTableViewController.swift in Sources */,
+				DD7902271F6DEF2600DEBDD5 /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

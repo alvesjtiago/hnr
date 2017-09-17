@@ -45,7 +45,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpv-Yo-eG7">
-                                            <rect key="frame" x="66" y="48" width="293" height="22"/>
+                                            <rect key="frame" x="66" y="48" width="223" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="Dsn-k9-WtJ"/>
                                             </constraints>
@@ -72,6 +72,18 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl5-sP-Izl">
+                                            <rect key="frame" x="331" y="49" width="28" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="dfj-lb-Ef5"/>
+                                                <constraint firstAttribute="width" constant="28" id="fhd-Fh-Q10"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                            <inset key="titleEdgeInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="0" backgroundImage="dialog">
+                                                <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="76F-m5-L6l"/>
@@ -79,16 +91,19 @@
                                         <constraint firstItem="Rpv-Yo-eG7" firstAttribute="top" secondItem="ZpE-R1-L1F" secondAttribute="bottom" constant="8" id="Edb-Dv-6Ol"/>
                                         <constraint firstItem="Rpv-Yo-eG7" firstAttribute="leading" secondItem="fxI-0K-jY4" secondAttribute="trailing" constant="8" id="LOT-6s-5V8"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZpE-R1-L1F" secondAttribute="trailing" constant="8" id="M1Q-dq-XzA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yl5-sP-Izl" secondAttribute="bottom" id="PdS-Xu-5hk"/>
                                         <constraint firstItem="fxI-0K-jY4" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="Qg9-6h-Ifm"/>
                                         <constraint firstAttribute="bottom" secondItem="Rpv-Yo-eG7" secondAttribute="bottom" constant="14.5" id="RfF-ln-CJc"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Rpv-Yo-eG7" secondAttribute="trailing" constant="8" id="WZs-K1-qCn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Rpv-Yo-eG7" secondAttribute="trailing" constant="78" id="WZs-K1-qCn"/>
                                         <constraint firstAttribute="bottom" secondItem="fxI-0K-jY4" secondAttribute="bottom" constant="14.5" id="mWR-lh-UFw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yl5-sP-Izl" secondAttribute="trailing" constant="8" id="qKX-Lc-s1B"/>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="top" secondItem="dLX-4k-Xy3" secondAttribute="topMargin" constant="4" id="yH6-Mm-L91"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outlet property="authorLabel" destination="Rpv-Yo-eG7" id="0Eb-Iu-FMD"/>
+                                    <outlet property="commentsButton" destination="yl5-sP-Izl" id="AvA-rU-yue"/>
                                     <outlet property="countLabel" destination="fxI-0K-jY4" id="Iw9-hY-1ui"/>
                                     <outlet property="titleLabel" destination="ZpE-R1-L1F" id="u0L-IB-Ex9"/>
                                 </connections>
@@ -107,7 +122,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRy-gY-vmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="753" y="-912"/>
+            <point key="canvasLocation" x="752.79999999999995" y="-912.5937031484259"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hVM-Cc-ijJ">
@@ -210,7 +225,123 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k02-96-ka8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752.79999999999995" y="-187.55622188905548"/>
+            <point key="canvasLocation" x="753" y="534"/>
+        </scene>
+        <!--Jobs-->
+        <scene sceneID="W4e-4S-9fa">
+            <objects>
+                <tableViewController storyboardIdentifier="jobsVC" id="0hA-dy-5EW" customClass="JobsTableViewController" customModule="HNR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="XvO-IE-cS1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="jobCell" rowHeight="85" id="JkT-PI-lff" customClass="JobCell" customModule="HNR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JkT-PI-lff" id="Imu-hq-hsN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HNr is hiring" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UB-n9-bYx">
+                                            <rect key="frame" x="16" y="12" width="343" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWh-fb-Dsz" customClass="RoundLabel" customModule="HNR" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="48" width="42" height="22"/>
+                                            <color key="backgroundColor" red="0.99215686270000003" green="0.42745098040000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="K2L-xJ-R21"/>
+                                                <constraint firstAttribute="height" constant="22" id="vfe-hn-7eb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-VL-E4p">
+                                            <rect key="frame" x="66" y="48" width="293" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="ddO-4P-p64"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="by ">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Tiago Alves">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="14" name="AvenirNext-Bold"/>
+                                                        <font key="NSOriginalFont" size="14" name="AvenirNext-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xDH-VL-E4p" secondAttribute="trailing" constant="8" id="5wo-PR-sW5"/>
+                                        <constraint firstItem="xDH-VL-E4p" firstAttribute="top" secondItem="6UB-n9-bYx" secondAttribute="bottom" constant="8" id="9RB-9T-ddy"/>
+                                        <constraint firstAttribute="bottom" secondItem="lWh-fb-Dsz" secondAttribute="bottom" constant="14.5" id="GbJ-qj-rtZ"/>
+                                        <constraint firstItem="lWh-fb-Dsz" firstAttribute="leading" secondItem="Imu-hq-hsN" secondAttribute="leadingMargin" constant="8" id="QVH-vS-9SA"/>
+                                        <constraint firstItem="6UB-n9-bYx" firstAttribute="leading" secondItem="Imu-hq-hsN" secondAttribute="leadingMargin" constant="8" id="Tdo-Lo-ToM"/>
+                                        <constraint firstItem="xDH-VL-E4p" firstAttribute="leading" secondItem="lWh-fb-Dsz" secondAttribute="trailing" constant="8" id="TwH-eD-K4T"/>
+                                        <constraint firstItem="lWh-fb-Dsz" firstAttribute="top" secondItem="6UB-n9-bYx" secondAttribute="bottom" constant="8" id="WKA-cM-UIx"/>
+                                        <constraint firstItem="6UB-n9-bYx" firstAttribute="top" secondItem="Imu-hq-hsN" secondAttribute="topMargin" constant="4" id="Zkk-Xe-XPJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6UB-n9-bYx" secondAttribute="trailing" constant="8" id="c5u-UT-pxt"/>
+                                        <constraint firstAttribute="bottom" secondItem="xDH-VL-E4p" secondAttribute="bottom" constant="14.5" id="tIx-Yd-Tq2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="authorLabel" destination="xDH-VL-E4p" id="uh4-sk-aSD"/>
+                                    <outlet property="countLabel" destination="lWh-fb-Dsz" id="YmF-ja-Um4"/>
+                                    <outlet property="titleLabel" destination="6UB-n9-bYx" id="cME-wL-SxV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0hA-dy-5EW" id="omc-Lf-XMV"/>
+                            <outlet property="delegate" destination="0hA-dy-5EW" id="zGC-m9-Oe1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Jobs" id="8de-dV-050">
+                        <barButtonItem key="backBarButtonItem" title=" " id="G00-56-jqh"/>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="zBm-v5-AIG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7D-IX-99g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.79999999999995" y="-188.45577211394306"/>
+        </scene>
+        <!--Jobs-->
+        <scene sceneID="6wV-9u-MB8">
+            <objects>
+                <navigationController id="GGk-sm-NuV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jobs" image="jobs" selectedImage="jobs-filled" id="XfM-Pa-DOI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="xkx-bI-DbH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99215686274509807" green="0.42745098039215684" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0hA-dy-5EW" kind="relationship" relationship="rootViewController" id="eCG-YE-kuy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CD-4E-5do" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-188"/>
         </scene>
         <!--Licenses-->
         <scene sceneID="vIF-RD-ULX">
@@ -239,92 +370,14 @@
                                                     <fragment content="Icons provided by Icon8 (">
                                                         <attributes>
                                                             <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="https://icons8.com">
                                                         <attributes>
                                                             <font key="NSFont" size="14" name="AvenirNext-Regular"/>
                                                             <url key="NSLink" string="https://icons8.com"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
@@ -332,46 +385,7 @@
 Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string>
                                                         <attributes>
                                                             <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -407,7 +421,7 @@ Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKM-zv-i1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568.8" y="-187.55622188905548"/>
+            <point key="canvasLocation" x="1569" y="534"/>
         </scene>
         <!--Settings-->
         <scene sceneID="dFg-yR-Wsy">
@@ -429,7 +443,7 @@ Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WW2-g4-l5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="-186"/>
+            <point key="canvasLocation" x="-63" y="534"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qbg-Qe-jcw">
@@ -443,6 +457,7 @@ Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string
                     </tabBar>
                     <connections>
                         <segue destination="0Ke-Ra-nEf" kind="relationship" relationship="viewControllers" id="eDL-wQ-Lwd"/>
+                        <segue destination="GGk-sm-NuV" kind="relationship" relationship="viewControllers" id="8Lp-lw-pua"/>
                         <segue destination="uy9-PE-dJS" kind="relationship" relationship="viewControllers" id="Tfs-JK-ign"/>
                     </connections>
                 </tabBarController>
@@ -477,6 +492,9 @@ Alamofire used for networking (https://github.com/Alamofire/Alamofire). </string
     </scenes>
     <resources>
         <image name="back" width="25" height="25"/>
+        <image name="dialog" width="25" height="25"/>
+        <image name="jobs" width="25" height="25"/>
+        <image name="jobs-filled" width="25" height="25"/>
         <image name="news" width="25" height="25"/>
         <image name="news-filled" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>

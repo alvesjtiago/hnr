@@ -22,7 +22,8 @@ class API: NSObject {
         
         Alamofire.request(baseURLString + "topstories.json").responseJSON { response in
             if var topstoriesJSON = response.result.value as? NSArray {
-                topstoriesJSON = topstoriesJSON.subarray(with: NSRange(location: 0, length: size)) as NSArray
+                let numberOfNews = topstoriesJSON.count > size ? size : topstoriesJSON.count
+                topstoriesJSON = topstoriesJSON.subarray(with: NSRange(location: 0, length: numberOfNews)) as NSArray
                 
                 var returnNews : [News] = []
                 
@@ -45,6 +46,43 @@ class API: NSObject {
                     }
                     
                     completionHandler(true, returnNews)
+                }
+                
+            } else {
+                completionHandler(false, [])
+            }
+        }
+    }
+    
+    // Fetch top jobs
+    public func fetchJobs(size: Int, completionHandler: @escaping (Bool, [Job]) -> Void) {
+        
+        Alamofire.request(baseURLString + "jobstories.json").responseJSON { response in
+            if var topJobsJSON = response.result.value as? NSArray {
+                let numberOfJobs = topJobsJSON.count > size ? size : topJobsJSON.count
+                topJobsJSON = topJobsJSON.subarray(with: NSRange(location: 0, length: numberOfJobs)) as NSArray
+                
+                var returnJobs : [Job] = []
+                
+                let jobsGroup = DispatchGroup()
+                for (_, job) in topJobsJSON.enumerated() {
+                    jobsGroup.enter()
+                    
+                    Alamofire.request(baseURLString + "item/\(job).json").responseJSON { response in
+                        if let jobJSON = response.result.value as? NSDictionary {
+                            let jobObject = Job.init(json: jobJSON)
+                            returnJobs.append(jobObject)
+                        }
+                        jobsGroup.leave()
+                    }
+                }
+                
+                jobsGroup.notify(queue: .main) {
+                    returnJobs.sort {a, b in
+                        topJobsJSON.index(of: a.id!) < topJobsJSON.index(of: b.id!)
+                    }
+                    
+                    completionHandler(true, returnJobs)
                 }
                 
             } else {

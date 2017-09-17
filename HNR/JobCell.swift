@@ -1,30 +1,28 @@
 //
-//  NewsCell.swift
+//  JobCell.swift
 //  HNR
 //
-//  Created by Tiago Alves on 19/05/2017.
+//  Created by Tiago Alves on 17/09/2017.
 //  Copyright © 2017 Tiago Alves. All rights reserved.
 //
 
 import UIKit
 
-class NewsCell: UITableViewCell {
-    
-    var news: News?
+class JobCell: UITableViewCell {
+
+    var job: Job?
     @IBOutlet weak var titleLabel:  UILabel?
     @IBOutlet weak var countLabel:  RoundLabel?
     @IBOutlet weak var authorLabel: UILabel?
-    @IBOutlet weak var commentsButton: UIButton?
     
-    func set(news: News) {
-        self.news = news
+    func set(job: Job) {
+        self.job = job
         
-        titleLabel?.text = news.title!
-        countLabel?.text = String(describing: news.score!)
-        commentsButton?.setTitle(String(describing: news.numberOfComments!), for: .normal)
+        titleLabel?.text = job.title!
+        countLabel?.text = String(describing: job.score!)
         
-        if news.by != nil {
-            let author = news.by!
+        if job.by != nil {
+            let author = job.by!
             let attrs = [NSFontAttributeName : UIFont(name: "AvenirNext-Bold", size: 14)!]
             let boldString = NSAttributedString(string: author, attributes: attrs)
             

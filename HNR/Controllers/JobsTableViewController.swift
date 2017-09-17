@@ -1,19 +1,19 @@
 //
-//  NewsTableViewController.swift
+//  JobsTableViewController.swift
 //  HNR
 //
-//  Created by Tiago Alves on 14/03/2017.
+//  Created by Tiago Alves on 17/09/2017.
 //  Copyright © 2017 Tiago Alves. All rights reserved.
 //
 
 import UIKit
 
-let maxNumberOfNews = 30
+let maxNumberOfJobs = 30
 
-class NewsTableViewController: UITableViewController {
+class JobsTableViewController: UITableViewController {
+
+    var allJobs : NSMutableArray = []
     
-    var allNews : NSMutableArray = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,58 +21,58 @@ class NewsTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 85.0
         
-        // Trigger refresh news when pull to refres is triggered
-        refreshControl?.addTarget(self, action: #selector(refreshNews), for: UIControlEvents.valueChanged)
+        // Trigger refresh jobs when pull to refres is triggered
+        refreshControl?.addTarget(self, action: #selector(refreshJobs), for: UIControlEvents.valueChanged)
         
         // Start refresh when view is loaded
         tableView.setContentOffset(CGPoint(x: 0, y: tableView.contentOffset.y - 30), animated: false)
         tableView.refreshControl?.beginRefreshing()
-        refreshNews()
+        refreshJobs()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allNews.count
+        return allJobs.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as! JobCell
         
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed(sender:)))
         cell.addGestureRecognizer(longPressRecognizer)
         
-        let news = allNews[indexPath.row] as! News
-        cell.set(news: news)
-
+        let job = allJobs[indexPath.row] as! Job
+        cell.set(job: job)
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let news = allNews[indexPath.row] as! News
+        let job = allJobs[indexPath.row] as! Job
         
-        if let url = news.url {
+        if let url = job.url {
             let safari: CustomWebViewController = CustomWebViewController(url: url)
             present(safari, animated: true, completion: nil)
         }
     }
     
-    func refreshNews() {
-        API.sharedInstance.fetchNews(size: maxNumberOfNews) { (success, news) in
+    func refreshJobs() {
+        API.sharedInstance.fetchJobs(size: maxNumberOfJobs) { (success, jobs) in
             
-            // Update array of news and interface
-            self.allNews = news as! NSMutableArray
+            // Update array of jobs and interface
+            self.allJobs = jobs as! NSMutableArray
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
             
             if (!success) {
                 // Display error
-                let alertView: UIAlertController = UIAlertController.init(title: "Error fetching news",
-                                                                          message: "There was an error fetching the new Hacker News articles. Please make sure you're connected to the internet and try again.",
+                let alertView: UIAlertController = UIAlertController.init(title: "Error fetching jobs",
+                                                                          message: "There was an error fetching the new Hacker News jobs. Please make sure you're connected to the internet and try again.",
                                                                           preferredStyle: .alert)
                 let dismissButton: UIAlertAction = UIAlertAction.init(title: "OK",
                                                                       style: .default,
@@ -87,8 +87,8 @@ class NewsTableViewController: UITableViewController {
     
     @IBAction func longPressed(sender: UILongPressGestureRecognizer)
     {
-        let newsCell:NewsCell = (sender.view as? NewsCell)!
-        if let myWebsite = newsCell.news?.url {
+        let jobCell:JobCell = (sender.view as? JobCell)!
+        if let myWebsite = jobCell.job?.url {
             let objectsToShare = [myWebsite]
             let activityVC = UIActivityViewController(activityItems: objectsToShare,
                                                       applicationActivities: nil)
