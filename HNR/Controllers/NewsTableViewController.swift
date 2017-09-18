@@ -48,6 +48,8 @@ class NewsTableViewController: UITableViewController {
         
         let news = allNews[indexPath.row] as! News
         cell.set(news: news)
+        
+        cell.commentsButton?.indexPath = indexPath
 
         return cell
     }
@@ -93,6 +95,17 @@ class NewsTableViewController: UITableViewController {
             let activityVC = UIActivityViewController(activityItems: objectsToShare,
                                                       applicationActivities: nil)
             self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "comments" {
+            let commentsViewController = segue.destination as! CommentsTableViewController
+            let button = sender as! CommentsButton
+            let indexPath = button.indexPath!
+            let news = allNews[indexPath.row] as! News
+            let commentsIds = news.commentsIds
+            commentsViewController.commentsIds = commentsIds
         }
     }
 

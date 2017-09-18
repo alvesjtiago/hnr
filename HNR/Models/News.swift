@@ -14,20 +14,22 @@ class News: NSObject {
     var score: Int?
     var by:    String?
     var url:   URL?
+    var commentsIds : NSArray = []
     var numberOfComments: Int? = 0
     
     convenience init(json: NSDictionary) {
         self.init()
-        id    = json.value(forKey: "id")    as? Int
-        title = json.value(forKey: "title") as? String
-        score = json.value(forKey: "score") as? Int
-        by    = json.value(forKey: "by")    as? String
+        id       = json.value(forKey: "id")    as? Int
+        title    = json.value(forKey: "title") as? String
+        score    = json.value(forKey: "score") as? Int
+        by       = json.value(forKey: "by")    as? String
         if let urlString = json.value(forKey: "url") as? String {
             url = URL(string: urlString)
         } else {
             url = URL(string: "https://news.ycombinator.com/item?id=" + String(describing: id!))
         }
         if let comments = json.value(forKey: "kids") as? NSArray {
+            commentsIds = comments
             numberOfComments = comments.count
         }
     }

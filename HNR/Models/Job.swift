@@ -11,7 +11,7 @@ import UIKit
 class Job: NSObject {
     var id:    Int?
     var title: String?
-    var text: String?
+    var text:  String?
     var score: Int?
     var by:    String?
     var url:   URL?

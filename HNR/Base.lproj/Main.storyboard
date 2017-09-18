@@ -72,7 +72,7 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl5-sP-Izl">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl5-sP-Izl" customClass="CommentsButton" customModule="HNR" customModuleProvider="target">
                                             <rect key="frame" x="331" y="49" width="28" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="dfj-lb-Ef5"/>
@@ -83,6 +83,9 @@
                                             <state key="normal" title="0" backgroundImage="dialog">
                                                 <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="uUu-Co-Ddj" kind="show" identifier="comments" id="8TT-tR-Oau"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -114,7 +117,9 @@
                             <outlet property="delegate" destination="Ftk-yC-7hM" id="a3A-WW-yPg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News" id="hMD-01-qZT"/>
+                    <navigationItem key="navigationItem" title="News" id="hMD-01-qZT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tRI-by-PHI"/>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hWP-yg-sAq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,6 +128,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRy-gY-vmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="752.79999999999995" y="-912.5937031484259"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="9tP-ib-Qh4">
+            <objects>
+                <tableViewController title="Comments" id="uUu-Co-Ddj" customClass="CommentsTableViewController" customModule="HNR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="VFz-ds-N18">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="85" id="yUw-UK-fid" customClass="CommentCell" customModule="HNR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yUw-UK-fid" id="YHF-7H-YUp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alvesjtiago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-9r-Zdb">
+                                            <rect key="frame" x="17" y="8" width="350" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="3sl-uk-TMC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjh-J0-xr3">
+                                            <rect key="frame" x="17" y="29" width="350" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="ECE-Y9-IEg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gp-iO-Jt2">
+                                            <rect key="frame" x="17" y="53" width="350" height="24"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Lorem ipsum">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4gp-iO-Jt2" firstAttribute="top" secondItem="Qjh-J0-xr3" secondAttribute="bottom" constant="8" id="21n-XC-bF8"/>
+                                        <constraint firstItem="4gp-iO-Jt2" firstAttribute="bottom" secondItem="YHF-7H-YUp" secondAttribute="bottomMargin" id="347-LP-JKD"/>
+                                        <constraint firstItem="Qjh-J0-xr3" firstAttribute="top" secondItem="dBR-9r-Zdb" secondAttribute="bottom" id="6tp-iY-e0K"/>
+                                        <constraint firstItem="dBR-9r-Zdb" firstAttribute="trailing" secondItem="YHF-7H-YUp" secondAttribute="trailingMargin" id="Lh6-O5-bTp"/>
+                                        <constraint firstItem="dBR-9r-Zdb" firstAttribute="leading" secondItem="YHF-7H-YUp" secondAttribute="leadingMargin" constant="9" id="bDs-Va-kz3"/>
+                                        <constraint firstItem="4gp-iO-Jt2" firstAttribute="leading" secondItem="YHF-7H-YUp" secondAttribute="leadingMargin" constant="9" id="g7k-1p-cJt"/>
+                                        <constraint firstItem="Qjh-J0-xr3" firstAttribute="trailing" secondItem="YHF-7H-YUp" secondAttribute="trailingMargin" id="qWF-iF-gNf"/>
+                                        <constraint firstItem="dBR-9r-Zdb" firstAttribute="top" secondItem="YHF-7H-YUp" secondAttribute="topMargin" id="ubb-uE-jyO"/>
+                                        <constraint firstItem="4gp-iO-Jt2" firstAttribute="trailing" secondItem="YHF-7H-YUp" secondAttribute="trailingMargin" id="veF-rp-C6N"/>
+                                        <constraint firstItem="Qjh-J0-xr3" firstAttribute="leading" secondItem="YHF-7H-YUp" secondAttribute="leadingMargin" constant="9" id="wQg-EJ-9mD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="dBR-9r-Zdb" id="RPJ-xC-ZW8"/>
+                                    <outlet property="contentLabel" destination="4gp-iO-Jt2" id="xiw-ej-Qmu"/>
+                                    <outlet property="timeLabel" destination="Qjh-J0-xr3" id="DYw-Gb-Iii"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uUu-Co-Ddj" id="21p-HW-cBM"/>
+                            <outlet property="delegate" destination="uUu-Co-Ddj" id="Oc5-qI-6Pb"/>
+                        </connections>
+                    </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RSh-eQ-are">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NnX-nj-pmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552.8" y="-913.49325337331345"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hVM-Cc-ijJ">
@@ -374,9 +460,9 @@ Alamofire used for networking (https://github.com/Alamofire/Alamofire).
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/). Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in
+                                        <string key="content">Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/). Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.</mutableString>
+THE SOFTWARE.</string>
                                         <attributes>
                                             <font key="NSFont" size="9" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -454,7 +540,7 @@ THE SOFTWARE.</mutableString>
                     <tabBarItem key="tabBarItem" title="News" image="news" selectedImage="news-filled" id="NUt-hR-l0r"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1R-iL-8rY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="G1R-iL-8rY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99215686274509807" green="0.42745098039215684" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>

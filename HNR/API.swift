@@ -90,4 +90,32 @@ class API: NSObject {
             }
         }
     }
+    
+    // Fetch comments
+    public func fetchComments(commentsIds: [Int], completionHandler: @escaping (Bool, [Comment]) -> Void) {
+        
+        var returnComments : [Comment] = []
+        
+        let commentsGroup = DispatchGroup()
+        for commentId in commentsIds {
+            commentsGroup.enter()
+            
+            Alamofire.request(baseURLString + "item/\(commentId).json").responseJSON { response in
+                if let commentJSON = response.result.value as? NSDictionary {
+                    let commentObject = Comment.init(json: commentJSON)
+                    returnComments.append(commentObject)
+                }
+                commentsGroup.leave()
+            }
+        }
+        
+        commentsGroup.notify(queue: .main) {
+            returnComments.sort {a, b in
+                commentsIds.index(of: a.id!)! < commentsIds.index(of: b.id!)!
+            }
+            
+            completionHandler(true, returnComments)
+        }
+        
+    }
 }

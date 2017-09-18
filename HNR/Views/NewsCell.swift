@@ -14,7 +14,7 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var titleLabel:  UILabel?
     @IBOutlet weak var countLabel:  RoundLabel?
     @IBOutlet weak var authorLabel: UILabel?
-    @IBOutlet weak var commentsButton: UIButton?
+    @IBOutlet weak var commentsButton: CommentsButton?
     
     func set(news: News) {
         self.news = news

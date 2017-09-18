@@ -27,6 +27,11 @@
 		DDDADA311E78915B00BD3933 /* HNRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA301E78915B00BD3933 /* HNRTests.swift */; };
 		DDDADA3C1E78915B00BD3933 /* HNRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDADA3B1E78915B00BD3933 /* HNRUITests.swift */; };
 		DDE1B3061ED33729009790A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE1B3051ED33729009790A5 /* API.swift */; };
+		DDEA8E971F7006FA0007B8B8 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA8E961F7006FA0007B8B8 /* Comment.swift */; };
+		DDEA8E991F700AA60007B8B8 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA8E981F700AA60007B8B8 /* CommentsTableViewController.swift */; };
+		DDEA8E9B1F700BA40007B8B8 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA8E9A1F700BA40007B8B8 /* CommentCell.swift */; };
+		DDEA8E9E1F700DB20007B8B8 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA8E9D1F700DB20007B8B8 /* DateFormatterExtension.swift */; };
+		DDEA8EA21F7014E30007B8B8 /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA8EA11F7014E30007B8B8 /* CommentsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,11 @@
 		DDDADA3B1E78915B00BD3933 /* HNRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNRUITests.swift; sourceTree = "<group>"; };
 		DDDADA3D1E78915B00BD3933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE1B3051ED33729009790A5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DDEA8E961F7006FA0007B8B8 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		DDEA8E981F700AA60007B8B8 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		DDEA8E9A1F700BA40007B8B8 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		DDEA8E9D1F700DB20007B8B8 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		DDEA8EA11F7014E30007B8B8 /* CommentsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsButton.swift; sourceTree = "<group>"; };
 		E28BA5CDC7E86C52A92B6D8B /* Pods_HNR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				DD9C2FEC1E7897C20062B760 /* NewsTableViewController.swift */,
+				DDEA8E981F700AA60007B8B8 /* CommentsTableViewController.swift */,
 				DD093EDB1ED773CB007BDDC0 /* CustomWebViewController.swift */,
 				DD7902241F6DEEA900DEBDD5 /* JobsTableViewController.swift */,
 				DD6983CA1F696DC50064D391 /* SettingsTableViewController.swift */,
@@ -118,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				DD12F3541ECF4B7500627A37 /* NewsCell.swift */,
+				DDEA8EA11F7014E30007B8B8 /* CommentsButton.swift */,
+				DDEA8E9A1F700BA40007B8B8 /* CommentCell.swift */,
 				DD79022A1F6DEFC300DEBDD5 /* JobCell.swift */,
 				DD84D1D81ED235AB0089898C /* RoundLabel.swift */,
 				DD3C1B7F1F6F373D0070956C /* PaddingTextView.swift */,
@@ -139,6 +152,7 @@
 			children = (
 				DD84D1D61ED234DF0089898C /* News.swift */,
 				DD7902261F6DEF2600DEBDD5 /* Job.swift */,
+				DDEA8E961F7006FA0007B8B8 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +182,7 @@
 		DDDADA181E78915B00BD3933 /* HNR */ = {
 			isa = PBXGroup;
 			children = (
+				DDEA8E9C1F700D970007B8B8 /* Extensions */,
 				DD5972BE1F69EF43009AA4AA /* Keys */,
 				DDDADA191E78915B00BD3933 /* AppDelegate.swift */,
 				DDE1B3051ED33729009790A5 /* API.swift */,
@@ -198,6 +213,14 @@
 				DDDADA3D1E78915B00BD3933 /* Info.plist */,
 			);
 			path = HNRUITests;
+			sourceTree = "<group>";
+		};
+		DDEA8E9C1F700D970007B8B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDEA8E9D1F700DB20007B8B8 /* DateFormatterExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		DE7ABDC868B983FA751C0BEA /* Frameworks */ = {
@@ -424,13 +447,18 @@
 				DD79022B1F6DEFC300DEBDD5 /* JobCell.swift in Sources */,
 				DD3C1B801F6F373D0070956C /* PaddingTextView.swift in Sources */,
 				DD12F3551ECF4B7500627A37 /* NewsCell.swift in Sources */,
+				DDEA8E9B1F700BA40007B8B8 /* CommentCell.swift in Sources */,
+				DDEA8E9E1F700DB20007B8B8 /* DateFormatterExtension.swift in Sources */,
 				DD84D1D71ED234DF0089898C /* News.swift in Sources */,
 				DD6983CB1F696DC50064D391 /* SettingsTableViewController.swift in Sources */,
+				DDEA8E991F700AA60007B8B8 /* CommentsTableViewController.swift in Sources */,
 				DD84D1D91ED235AB0089898C /* RoundLabel.swift in Sources */,
+				DDEA8E971F7006FA0007B8B8 /* Comment.swift in Sources */,
 				DDE1B3061ED33729009790A5 /* API.swift in Sources */,
 				DDDADA1A1E78915B00BD3933 /* AppDelegate.swift in Sources */,
 				DD7902251F6DEEA900DEBDD5 /* JobsTableViewController.swift in Sources */,
 				DD7902271F6DEF2600DEBDD5 /* Job.swift in Sources */,
+				DDEA8EA21F7014E30007B8B8 /* CommentsButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
