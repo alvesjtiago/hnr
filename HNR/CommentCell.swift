@@ -15,6 +15,13 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var timeLabel:    UILabel!
     @IBOutlet weak var contentLabel: UITextView!
     
+    var defaultAuthorLabelLeadingConstant = 9
+    @IBOutlet weak var authorLabelLeadingConstraint: NSLayoutConstraint!
+    var defaultTimeLabelLeadingConstant = 9
+    @IBOutlet weak var timeLabelLeadingConstraint: NSLayoutConstraint!
+    var defaultContentLabelLeadingConstant = 9
+    @IBOutlet weak var contentLabelLeadingConstraint: NSLayoutConstraint!
+    
     func set(comment: Comment) {
         self.comment = comment
         

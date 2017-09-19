@@ -11,8 +11,8 @@ import UIKit
 class CommentsTableViewController: UITableViewController {
     
     var commentsIds : NSArray = []
-    var allComments : NSMutableArray = []
-
+    var flatennedComments : [Comment] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,14 +41,19 @@ class CommentsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allComments.count
+        return self.flatennedComments.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as! CommentCell
         
-        let comment = allComments[indexPath.row] as! Comment
+        let comment = flatennedComments[indexPath.row]
         cell.set(comment: comment)
+        
+        cell.authorLabelLeadingConstraint.constant = CGFloat(cell.defaultAuthorLabelLeadingConstant + comment.indentLevel * 20)
+        cell.timeLabelLeadingConstraint.constant = CGFloat(cell.defaultTimeLabelLeadingConstant + comment.indentLevel * 20)
+        cell.contentLabelLeadingConstraint.constant = CGFloat(cell.defaultContentLabelLeadingConstant + comment.indentLevel * 20)
+        cell.layoutSubviews()
         
         return cell
     }
@@ -57,7 +62,12 @@ class CommentsTableViewController: UITableViewController {
         API.sharedInstance.fetchComments(commentsIds: commentsIds as! [Int]) { (success, comments) in
             
             // Update array of news and interface
-            self.allComments = comments as! NSMutableArray
+            var flattenComments = [Any]()
+            for comment in comments {
+                flattenComments += comment.flattenedComments() as! Array<Any>
+            }
+            self.flatennedComments = flattenComments.flatMap { $0 } as! [Comment]
+            
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
             

@@ -103,9 +103,13 @@ class API: NSObject {
             Alamofire.request(baseURLString + "item/\(commentId).json").responseJSON { response in
                 if let commentJSON = response.result.value as? NSDictionary {
                     let commentObject = Comment.init(json: commentJSON)
-                    returnComments.append(commentObject)
+                    commentObject.getComments(completionHandler: { (success) in
+                        returnComments.append(commentObject)
+                        commentsGroup.leave()
+                    })
+                } else {
+                    commentsGroup.leave()
                 }
-                commentsGroup.leave()
             }
         }
         

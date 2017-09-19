@@ -33,15 +33,15 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxI-0K-jY4" customClass="RoundLabel" customModule="HNR" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="48" width="42" height="22"/>
-                                            <color key="backgroundColor" red="0.99215686274509807" green="0.42745098039215684" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxI-0K-jY4">
+                                            <rect key="frame" x="22" y="48" width="42" height="22"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="Jba-tD-mlq"/>
                                                 <constraint firstAttribute="width" constant="42" id="Lei-aJ-rz1"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpv-Yo-eG7">
@@ -87,17 +87,26 @@
                                                 <segue destination="uUu-Co-Ddj" kind="show" identifier="comments" id="8TT-tR-Oau"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up" translatesAutoresizingMaskIntoConstraints="NO" id="82z-Ne-GcF">
+                                            <rect key="frame" x="14" y="51" width="14" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="14" id="PqD-FW-QIo"/>
+                                                <constraint firstAttribute="height" constant="16" id="Rte-ud-Wid"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="76F-m5-L6l"/>
                                         <constraint firstItem="fxI-0K-jY4" firstAttribute="top" secondItem="ZpE-R1-L1F" secondAttribute="bottom" constant="8" id="ARs-a3-aCB"/>
                                         <constraint firstItem="Rpv-Yo-eG7" firstAttribute="top" secondItem="ZpE-R1-L1F" secondAttribute="bottom" constant="8" id="Edb-Dv-6Ol"/>
-                                        <constraint firstItem="Rpv-Yo-eG7" firstAttribute="leading" secondItem="fxI-0K-jY4" secondAttribute="trailing" constant="8" id="LOT-6s-5V8"/>
+                                        <constraint firstItem="82z-Ne-GcF" firstAttribute="top" secondItem="ZpE-R1-L1F" secondAttribute="bottom" constant="11" id="G7A-da-CK8"/>
+                                        <constraint firstItem="Rpv-Yo-eG7" firstAttribute="leading" secondItem="fxI-0K-jY4" secondAttribute="trailing" constant="2" id="LOT-6s-5V8"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZpE-R1-L1F" secondAttribute="trailing" constant="8" id="M1Q-dq-XzA"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="yl5-sP-Izl" secondAttribute="bottom" id="PdS-Xu-5hk"/>
-                                        <constraint firstItem="fxI-0K-jY4" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="8" id="Qg9-6h-Ifm"/>
+                                        <constraint firstItem="fxI-0K-jY4" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="14" id="Qg9-6h-Ifm"/>
                                         <constraint firstAttribute="bottom" secondItem="Rpv-Yo-eG7" secondAttribute="bottom" constant="14.5" id="RfF-ln-CJc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Rpv-Yo-eG7" secondAttribute="trailing" constant="78" id="WZs-K1-qCn"/>
+                                        <constraint firstItem="82z-Ne-GcF" firstAttribute="leading" secondItem="dLX-4k-Xy3" secondAttribute="leadingMargin" constant="6" id="Ylf-l1-Agn"/>
                                         <constraint firstAttribute="bottom" secondItem="fxI-0K-jY4" secondAttribute="bottom" constant="14.5" id="mWR-lh-UFw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yl5-sP-Izl" secondAttribute="trailing" constant="8" id="qKX-Lc-s1B"/>
                                         <constraint firstItem="ZpE-R1-L1F" firstAttribute="top" secondItem="dLX-4k-Xy3" secondAttribute="topMargin" constant="4" id="yH6-Mm-L91"/>
@@ -142,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yUw-UK-fid" id="YHF-7H-YUp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alvesjtiago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-9r-Zdb">
@@ -192,8 +201,11 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="authorLabel" destination="dBR-9r-Zdb" id="RPJ-xC-ZW8"/>
+                                    <outlet property="authorLabelLeadingConstraint" destination="bDs-Va-kz3" id="7r1-5h-eSr"/>
                                     <outlet property="contentLabel" destination="4gp-iO-Jt2" id="xiw-ej-Qmu"/>
+                                    <outlet property="contentLabelLeadingConstraint" destination="g7k-1p-cJt" id="EIR-zq-Sgg"/>
                                     <outlet property="timeLabel" destination="Qjh-J0-xr3" id="DYw-Gb-Iii"/>
+                                    <outlet property="timeLabelLeadingConstraint" destination="wQg-EJ-9mD" id="jDo-kO-ojd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -203,6 +215,7 @@
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RSh-eQ-are">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
@@ -540,7 +553,7 @@ THE SOFTWARE.</string>
                     <tabBarItem key="tabBarItem" title="News" image="news" selectedImage="news-filled" id="NUt-hR-l0r"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="G1R-iL-8rY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="G1R-iL-8rY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99215686274509807" green="0.42745098039215684" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
@@ -567,5 +580,6 @@ THE SOFTWARE.</string>
         <image name="news-filled" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
         <image name="settings-filled" width="25" height="25"/>
+        <image name="up" width="24" height="24"/>
     </resources>
 </document>
