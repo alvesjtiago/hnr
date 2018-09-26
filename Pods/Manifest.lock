@@ -1,19 +1,16 @@
 PODS:
   - Alamofire (4.4.0)
-  - Crashlytics (3.8.6):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.12)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - Crashlytics
-  - Fabric
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
-  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
 
-PODFILE CHECKSUM: d736259ee6fd8e83d29d67b379c8e3e1248a4e11
+PODFILE CHECKSUM: 2196e72702720f46624a42f4a7a2563862c3e0d9
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

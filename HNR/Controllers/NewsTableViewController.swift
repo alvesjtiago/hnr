@@ -12,7 +12,7 @@ let maxNumberOfNews = 30
 
 class NewsTableViewController: UITableViewController {
     
-    var allNews : NSMutableArray = []
+    var allNews : Array<News> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ class NewsTableViewController: UITableViewController {
         API.sharedInstance.fetchNews(size: maxNumberOfNews) { (success, news) in
             
             // Update array of news and interface
-            self.allNews = news as! NSMutableArray
+            self.allNews = news
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
             
