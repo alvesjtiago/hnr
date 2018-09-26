@@ -46,7 +46,7 @@ class NewsTableViewController: UITableViewController {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed(sender:)))
         cell.addGestureRecognizer(longPressRecognizer)
         
-        let news = allNews[indexPath.row] as! News
+        let news = allNews[indexPath.row]
         cell.set(news: news)
         
         cell.commentsButton?.indexPath = indexPath
@@ -55,7 +55,7 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let news = allNews[indexPath.row] as! News
+        let news = allNews[indexPath.row]
         
         if let url = news.url {
             let safari: CustomWebViewController = CustomWebViewController(url: url)
@@ -103,7 +103,7 @@ class NewsTableViewController: UITableViewController {
             let commentsViewController = segue.destination as! CommentsTableViewController
             let button = sender as! CommentsButton
             let indexPath = button.indexPath!
-            let news = allNews[indexPath.row] as! News
+            let news = allNews[indexPath.row]
             let commentsIds = news.commentsIds
             commentsViewController.commentsIds = commentsIds
         }

@@ -12,7 +12,7 @@ let maxNumberOfJobs = 30
 
 class JobsTableViewController: UITableViewController {
 
-    var allJobs : NSMutableArray = []
+    var allJobs : Array<Job> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +46,14 @@ class JobsTableViewController: UITableViewController {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed(sender:)))
         cell.addGestureRecognizer(longPressRecognizer)
         
-        let job = allJobs[indexPath.row] as! Job
+        let job = allJobs[indexPath.row]
         cell.set(job: job)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let job = allJobs[indexPath.row] as! Job
+        let job = allJobs[indexPath.row]
         
         if let url = job.url {
             let safari: CustomWebViewController = CustomWebViewController(url: url)
@@ -65,7 +65,7 @@ class JobsTableViewController: UITableViewController {
         API.sharedInstance.fetchJobs(size: maxNumberOfJobs) { (success, jobs) in
             
             // Update array of jobs and interface
-            self.allJobs = jobs as! NSMutableArray
+            self.allJobs = jobs
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
             
